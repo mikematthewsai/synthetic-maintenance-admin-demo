@@ -1,0 +1,19 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "doc_id": "similar-asset",
+  "revision": "1",
+  "job_id": "J-SYN-101",
+  "equipment_id": "P-SYN-101A",
+  "passages": [
+    {
+      "id": "p1",
+      "fields": {
+        "planned_date": "2026-11-03",
+        "coordinator": "Fictional Reviewer B",
+        "admin_status": "draft_ready",
+        "asset_description": "Fictional pump record Beta"
+      },
+      "text": "Similar ID, separate job. Never merge with P-SYN-101."
+    }
+  ]
+}

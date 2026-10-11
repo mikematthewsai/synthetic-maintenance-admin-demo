@@ -1,0 +1,13 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "id": "fictional-admin-checklist",
+  "revision": "1",
+  "defined_by": "Fictional administrative fixture reviewer",
+  "required_fields": [
+    "asset_description",
+    "planned_date",
+    "coordinator",
+    "admin_status"
+  ],
+  "scope": "Administrative record completeness only. A real qualified reviewer must define requirements before using real maintenance semantics."
+}

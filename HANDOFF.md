@@ -1,0 +1,21 @@
+# Local synthetic administrative prototype
+
+- Separate local project; existing marketing/portal dirty HANDOFF files untouched.
+- Branch codex/synthetic-admin-demo; no remote, push, deployment or outreach.
+- Standard-library Python and SQLite. No AI, model, RAG, OCR or network client.
+- Fictional pump-job records, stable IDs/revisions/passages and exact source hashes.
+- Missing coordinator; conflicting dates/status retained; no automatic resolution.
+- Superseded/similar-asset/irrelevant records excluded from the target draft.
+- Unreadable input and seeded embedded instruction flagged, human queue visible.
+- Review attaches to source/checklist fingerprint and never authorizes maintenance.
+- Source changes invalidate old review; stale fact query abstains.
+- Local escaped HTML links to source passage views and original JSON snapshots.
+- Exact job/equipment/date SQLite retrieval tested across CLI processes.
+- Initial suite 26 passed; final suite adds network/malformed/nested-export checks.
+- run_evidence.py records actual final results and exact clean Git HEAD locally.
+- README.md and TEST-PLAN.md contain reproduction commands.
+- fixture-answer-key.json contains hand-written synthetic fixture expectations.
+- CAPABILITY-LIMITS.md separates prototype evidence from unimplemented capabilities.
+- Real qualified reviewer, security owner and customer system facts remain required.
+- Optional AI deliberately unimplemented. No real procedures or operational decisions.
+- Independent review before any proposal to publish fictional code/evidence.

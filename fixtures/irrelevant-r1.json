@@ -1,0 +1,18 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "doc_id": "irrelevant",
+  "revision": "1",
+  "job_id": "J-SYN-900",
+  "equipment_id": "OFFICE-SYN-9",
+  "passages": [
+    {
+      "id": "p1",
+      "fields": {
+        "planned_date": "2026-12-01",
+        "coordinator": "Fictional Office Reviewer",
+        "admin_status": "deferred"
+      },
+      "text": "Fictional office stationery administration, unrelated to pump job."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "site": "Fictional Example Site",
+  "documents": [
+    {
+      "doc_id": "job-register",
+      "revision": "1",
+      "current": false,
+      "file": "job-register-r1.json"
+    },
+    {
+      "doc_id": "job-register",
+      "revision": "2",
+      "current": true,
+      "file": "job-register-r2.json"
+    },
+    {
+      "doc_id": "handover-note",
+      "revision": "1",
+      "current": true,
+      "file": "handover-note-r1.json"
+    },
+    {
+      "doc_id": "asset-register",
+      "revision": "1",
+      "current": false,
+      "file": "asset-register-r1.json"
+    },
+    {
+      "doc_id": "asset-register",
+      "revision": "2",
+      "current": true,
+      "file": "asset-register-r2.json"
+    },
+    {
+      "doc_id": "similar-asset",
+      "revision": "1",
+      "current": true,
+      "file": "similar-asset-r1.json"
+    },
+    {
+      "doc_id": "irrelevant",
+      "revision": "1",
+      "current": true,
+      "file": "irrelevant-r1.json"
+    },
+    {
+      "doc_id": "embedded-instruction",
+      "revision": "1",
+      "current": true,
+      "file": "embedded-instruction-r1.json"
+    },
+    {
+      "doc_id": "unreadable",
+      "revision": "1",
+      "current": true,
+      "file": "unreadable-r1.bin"
+    }
+  ]
+}

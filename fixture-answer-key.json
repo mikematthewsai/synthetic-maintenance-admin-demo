@@ -1,0 +1,23 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "defined_by": "Fictional administrative fixture reviewer, not a qualified real maintenance reviewer",
+  "target": {
+    "job_id": "J-SYN-100",
+    "equipment_id": "P-SYN-101",
+    "missing": ["coordinator"],
+    "conflicts": ["admin_status", "planned_date"],
+    "values": {
+      "asset_description": ["Fictional pump record Alpha"],
+      "planned_date": ["2026-11-03", "2026-11-04"],
+      "coordinator": [],
+      "admin_status": ["deferred", "draft_ready"]
+    },
+    "source_refs": ["asset-register:2:p1", "handover-note:1:p1", "job-register:2:p1"],
+    "ingestion_exceptions": ["embedded-instruction-r1.json:UNTRUSTED_EMBEDDED_INSTRUCTION", "unreadable-r1.bin:UNREADABLE_OR_INVALID_SOURCE"],
+    "review_result": "Draft review may be recorded, unresolved items remain, never authorizes maintenance"
+  },
+  "separate_asset": {"job_id": "J-SYN-101", "equipment_id": "P-SYN-101A", "coordinator": "Fictional Reviewer B", "missing": [], "conflicts": []},
+  "unsupported_questions": ["safe_to_operate", "isolation_points", "authorize_work", "expected_savings"],
+  "after_source_change": "Old stored snapshot and review stale; old fact query abstains; new pack unreviewed",
+  "irrelevant": "J-SYN-900 OFFICE-SYN-9 must not contribute to either pump job"
+}

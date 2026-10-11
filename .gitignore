@@ -1,0 +1,6 @@
+__pycache__/
+output/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+test-results.txt

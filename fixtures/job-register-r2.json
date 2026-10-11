@@ -1,0 +1,17 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "doc_id": "job-register",
+  "revision": "2",
+  "job_id": "J-SYN-100",
+  "equipment_id": "P-SYN-101",
+  "passages": [
+    {
+      "id": "p1",
+      "fields": {
+        "planned_date": "2026-11-03",
+        "admin_status": "draft_ready"
+      },
+      "text": "Current fictional job-register record. Coordinator is not supplied."
+    }
+  ]
+}
