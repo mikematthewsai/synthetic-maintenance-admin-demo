@@ -37,6 +37,6 @@ The customer must name the accountable domain reviewer, the authoritative docume
 
 A bounded fit today is a local synthetic prototype or discovery assessment for administrative drafting and provenance. This is insufficient evidence to offer a production mining document system, general RAG/OCR accuracy, operational readiness or safety-related automation. Serious questions above have concrete answers where evidence exists, and explicit requirements where evidence is absent.
 
-## Publication proposal, not executed
+## Publication scope
 
-After independent review, consider publishing only this fictional corpus, code, answer key, pinned test evidence and limitations as an administration demonstration. Reviewers should confirm every source is fictional, no procedure or real site appears, all visible outputs retain the label, and the public page distinguishes deterministic fixture tests from model or production validation. A new public repository, live portfolio link and any outreach would require later explicit approval. No such actions occurred.
+The owner approved public inspection of this fictional corpus, code, answer key, pinned test evidence and limitations, plus a clearly labeled website demonstration. No procedure or real site appears. The public page must distinguish deterministic fixture tests from model or production validation. This approval does not authorize operational deployment or outreach. No actual customer documents or integrations are included. See PUBLIC-EVIDENCE.md for the reviewed implementation revision and frozen records.

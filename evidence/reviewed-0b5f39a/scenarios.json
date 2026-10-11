@@ -1,0 +1,38 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "original_review_state": "DRAFT_REVIEW_RECORDED",
+  "unchanged_authorization": "NONE",
+  "original_search": {
+    "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+    "matches": [
+      {
+        "pack_id": "pack-86f3668fef1ce88237077306",
+        "job_id": "J-SYN-100",
+        "equipment_id": "P-SYN-101",
+        "observed_dates": [
+          "2026-11-03",
+          "2026-11-04"
+        ],
+        "date_is_conflicted": true,
+        "snapshot_state": "CURRENT_SOURCE_SNAPSHOT",
+        "review_state": "DRAFT_REVIEW_RECORDED"
+      }
+    ],
+    "date_semantics": "Matches any source-asserted planned date, including unresolved conflicting dates; not an approved date."
+  },
+  "stale_snapshot": "STALE_SOURCE_SNAPSHOT",
+  "stale_review": "STALE_REVIEW",
+  "stale_query": {
+    "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+    "state": "ABSTAIN_STALE_SNAPSHOT",
+    "sources": []
+  },
+  "stale_review_rejection": "SOURCE_CHANGED_REVIEW_REJECTED",
+  "new_review_state": "UNREVIEWED",
+  "unsupported_question": {
+    "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+    "state": "ABSTAIN_UNSUPPORTED_QUESTION",
+    "reason": "Only the four administrative fixture fields are supported. No safety, isolation or work authorization answer is provided.",
+    "sources": []
+  }
+}

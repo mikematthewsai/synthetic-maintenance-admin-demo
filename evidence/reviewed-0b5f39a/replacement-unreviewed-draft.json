@@ -1,0 +1,207 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "job_id": "J-SYN-100",
+  "equipment_id": "P-SYN-101",
+  "fingerprint": "ceac414ee1374a7cf8b666082eff8819d9f31d8f47464a6cc02f5f9cc514449c",
+  "checklist": {
+    "id": "fictional-admin-checklist",
+    "revision": "1"
+  },
+  "fields": {
+    "admin_status": {
+      "state": "conflict",
+      "candidates": [
+        {
+          "value": "deferred",
+          "sources": [
+            {
+              "doc_id": "handover-note",
+              "revision": "1",
+              "passage_id": "p1",
+              "file": "handover-note-r1.json",
+              "source_sha256": "7f71f0c38bc28fe1cbcdcf16f514c9b231f76d989867ec5ed99da72e69444f2f",
+              "passage_sha256": "3dac1e503eecd08394bd172ce0582ed026d907ea7a51ae8cc748121282819275"
+            }
+          ]
+        },
+        {
+          "value": "draft_ready",
+          "sources": [
+            {
+              "doc_id": "job-register",
+              "revision": "2",
+              "passage_id": "p1",
+              "file": "job-register-r2.json",
+              "source_sha256": "ddb440f1af99357d063f4a5961f99bed72031f3adb0229387e37e2e90203463e",
+              "passage_sha256": "dd32e99d234248d3ec70730b265d68fc96fe26a0a772bd623db10e33c021cf10"
+            }
+          ]
+        }
+      ]
+    },
+    "asset_description": {
+      "state": "source_asserted",
+      "candidates": [
+        {
+          "value": "Fictional pump record Alpha",
+          "sources": [
+            {
+              "doc_id": "asset-register",
+              "revision": "2",
+              "passage_id": "p1",
+              "file": "asset-register-r2.json",
+              "source_sha256": "cedd0345dc0495f249f83f35301779d2cbc5646d95099094f6a14d6f5204dd54",
+              "passage_sha256": "2f2d37a60f3e6936fca7890913bf2a0f5701bbf8a9374fc33aaea5063718666c"
+            }
+          ]
+        }
+      ]
+    },
+    "coordinator": {
+      "state": "missing",
+      "candidates": []
+    },
+    "planned_date": {
+      "state": "conflict",
+      "candidates": [
+        {
+          "value": "2026-11-04",
+          "sources": [
+            {
+              "doc_id": "handover-note",
+              "revision": "1",
+              "passage_id": "p1",
+              "file": "handover-note-r1.json",
+              "source_sha256": "7f71f0c38bc28fe1cbcdcf16f514c9b231f76d989867ec5ed99da72e69444f2f",
+              "passage_sha256": "3dac1e503eecd08394bd172ce0582ed026d907ea7a51ae8cc748121282819275"
+            }
+          ]
+        },
+        {
+          "value": "2026-11-05",
+          "sources": [
+            {
+              "doc_id": "job-register",
+              "revision": "2",
+              "passage_id": "p1",
+              "file": "job-register-r2.json",
+              "source_sha256": "ddb440f1af99357d063f4a5961f99bed72031f3adb0229387e37e2e90203463e",
+              "passage_sha256": "dd32e99d234248d3ec70730b265d68fc96fe26a0a772bd623db10e33c021cf10"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "missing": [
+    "coordinator"
+  ],
+  "conflicts": [
+    "admin_status",
+    "planned_date"
+  ],
+  "source_manifest": [
+    {
+      "doc_id": "asset-register",
+      "revision": "2",
+      "passage_id": "p1",
+      "file": "asset-register-r2.json",
+      "source_sha256": "cedd0345dc0495f249f83f35301779d2cbc5646d95099094f6a14d6f5204dd54",
+      "passage_sha256": "2f2d37a60f3e6936fca7890913bf2a0f5701bbf8a9374fc33aaea5063718666c"
+    },
+    {
+      "doc_id": "handover-note",
+      "revision": "1",
+      "passage_id": "p1",
+      "file": "handover-note-r1.json",
+      "source_sha256": "7f71f0c38bc28fe1cbcdcf16f514c9b231f76d989867ec5ed99da72e69444f2f",
+      "passage_sha256": "3dac1e503eecd08394bd172ce0582ed026d907ea7a51ae8cc748121282819275"
+    },
+    {
+      "doc_id": "job-register",
+      "revision": "2",
+      "passage_id": "p1",
+      "file": "job-register-r2.json",
+      "source_sha256": "ddb440f1af99357d063f4a5961f99bed72031f3adb0229387e37e2e90203463e",
+      "passage_sha256": "dd32e99d234248d3ec70730b265d68fc96fe26a0a772bd623db10e33c021cf10"
+    }
+  ],
+  "ingestion_issues": [
+    {
+      "source": "embedded-instruction-r1.json",
+      "state": "UNTRUSTED_EMBEDDED_INSTRUCTION"
+    },
+    {
+      "source": "unreadable-r1.bin",
+      "state": "UNREADABLE_OR_INVALID_SOURCE"
+    }
+  ],
+  "human_review_queue": [
+    {
+      "reason": "MISSING_REQUIRED_FIELD",
+      "field": "coordinator"
+    },
+    {
+      "reason": "CONFLICTING_SOURCE_VALUES",
+      "field": "admin_status"
+    },
+    {
+      "reason": "CONFLICTING_SOURCE_VALUES",
+      "field": "planned_date"
+    },
+    {
+      "reason": "INGESTION_EXCEPTION",
+      "source": "embedded-instruction-r1.json",
+      "state": "UNTRUSTED_EMBEDDED_INSTRUCTION"
+    },
+    {
+      "reason": "INGESTION_EXCEPTION",
+      "source": "unreadable-r1.bin",
+      "state": "UNREADABLE_OR_INVALID_SOURCE"
+    },
+    {
+      "reason": "HUMAN_REVIEW_REQUIRED",
+      "scope": "Administrative draft only; cannot authorize maintenance."
+    }
+  ],
+  "handover": {
+    "status": "draft",
+    "job_id": "J-SYN-100",
+    "equipment_id": "P-SYN-101",
+    "unresolved_fields": [
+      "admin_status",
+      "coordinator",
+      "planned_date"
+    ],
+    "source_references": [
+      {
+        "doc_id": "asset-register",
+        "revision": "2",
+        "passage_id": "p1",
+        "file": "asset-register-r2.json",
+        "source_sha256": "cedd0345dc0495f249f83f35301779d2cbc5646d95099094f6a14d6f5204dd54",
+        "passage_sha256": "2f2d37a60f3e6936fca7890913bf2a0f5701bbf8a9374fc33aaea5063718666c"
+      },
+      {
+        "doc_id": "handover-note",
+        "revision": "1",
+        "passage_id": "p1",
+        "file": "handover-note-r1.json",
+        "source_sha256": "7f71f0c38bc28fe1cbcdcf16f514c9b231f76d989867ec5ed99da72e69444f2f",
+        "passage_sha256": "3dac1e503eecd08394bd172ce0582ed026d907ea7a51ae8cc748121282819275"
+      },
+      {
+        "doc_id": "job-register",
+        "revision": "2",
+        "passage_id": "p1",
+        "file": "job-register-r2.json",
+        "source_sha256": "ddb440f1af99357d063f4a5961f99bed72031f3adb0229387e37e2e90203463e",
+        "passage_sha256": "dd32e99d234248d3ec70730b265d68fc96fe26a0a772bd623db10e33c021cf10"
+      }
+    ],
+    "authorization": "NONE. Administrative draft only."
+  },
+  "authorization": "NONE",
+  "review_state": "UNREVIEWED",
+  "pack_id": "pack-945a824027f19fd75390b14d"
+}

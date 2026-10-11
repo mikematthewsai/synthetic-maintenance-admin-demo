@@ -1,7 +1,9 @@
 # Local synthetic administrative prototype
 
-- Separate local project; existing marketing/portal dirty HANDOFF files untouched.
-- Branch codex/synthetic-admin-demo; no remote, push, deployment or outreach.
+- Separate project; existing marketing/portal dirty HANDOFF files untouched.
+- Owner approved public synthetic source/evidence and labeled website page.
+- Reviewed implementation 0b5f39a; publication adds frozen evidence/docs only.
+- Branch codex/synthetic-admin-demo. No operational service or outreach.
 - Standard-library Python and SQLite. No AI, model, RAG, OCR or network client.
 - Fictional pump-job records, stable IDs/revisions/passages and exact source hashes.
 - Missing coordinator; conflicting dates/status retained; no automatic resolution.
@@ -22,4 +24,5 @@
 - CAPABILITY-LIMITS.md separates prototype evidence from unimplemented capabilities.
 - Real qualified reviewer, security owner and customer system facts remain required.
 - Optional AI deliberately unimplemented. No real procedures or operational decisions.
-- Independent review before any proposal to publish fictional code/evidence.
+- Prior independent static review addressed; no independent code rerun claimed.
+- PUBLIC-EVIDENCE.md links reviewed source, actual results and fixture limits.

@@ -1,0 +1,18 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "matches": [
+    {
+      "pack_id": "pack-86f3668fef1ce88237077306",
+      "job_id": "J-SYN-100",
+      "equipment_id": "P-SYN-101",
+      "observed_dates": [
+        "2026-11-03",
+        "2026-11-04"
+      ],
+      "date_is_conflicted": true,
+      "snapshot_state": "CURRENT_SOURCE_SNAPSHOT",
+      "review_state": "DRAFT_REVIEW_RECORDED"
+    }
+  ],
+  "date_semantics": "Matches any source-asserted planned date, including unresolved conflicting dates; not an approved date."
+}

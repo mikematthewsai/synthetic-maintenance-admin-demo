@@ -41,7 +41,7 @@ python demo.py search --job J-SYN-100 --equipment P-SYN-101 --date 2026-11-03
 
 The first query preserves both conflicting dates. The second abstains. A review note never changes missing fields, resolves conflicts or authorizes anything. `run_evidence.py` also changes a copied fixture and shows the old review becoming stale, the stale query abstaining and a replacement draft starting unreviewed. It leaves tracked fixtures unchanged.
 
-Data stays in local fixture files, local SQLite and local exports. This is a single-user CLI; it has no remote server, authentication or connection to operating equipment. Local access is ordinary filesystem access. `output/` is ignored by Git. The repository has no remote and has not been deployed or published.
+When run, data stays in local fixture files, local SQLite and local exports. This is a single-user CLI; it has no remote server, authentication or connection to operating equipment. Local access is ordinary filesystem access. `output/` is ignored by Git. This synthetic source and a frozen evidence copy are published for inspection with the owner's approval. No operational service is deployed. See [PUBLIC-EVIDENCE.md](PUBLIC-EVIDENCE.md).
 
 Passing this small, deliberately designed corpus does not establish representative coverage, safety, savings, production reliability or general document understanding. Every source-asserted administrative value remains a claim from a fixture, not an operational fact.
 

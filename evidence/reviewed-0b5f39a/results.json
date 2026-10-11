@@ -1,0 +1,70 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "commit": "0b5f39af903ee3fed80ab62031365c681d737fc6",
+  "branch": "codex/synthetic-admin-demo",
+  "python": "3.14.0",
+  "tests_run": 34,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "fixture_fingerprint": "a89ac0219bda32b8c7a9b49bec4876715dc7557d1db31c6d91f5df8749c0ab2e",
+  "primary_pack_id": "pack-86f3668fef1ce88237077306",
+  "expected_document_failures": {
+    "missing": [
+      "coordinator"
+    ],
+    "conflicts": [
+      "admin_status",
+      "planned_date"
+    ],
+    "ingestion_issues": [
+      {
+        "source": "embedded-instruction-r1.json",
+        "state": "UNTRUSTED_EMBEDDED_INSTRUCTION"
+      },
+      {
+        "source": "unreadable-r1.bin",
+        "state": "UNREADABLE_OR_INVALID_SOURCE"
+      }
+    ]
+  },
+  "scenario_result": {
+    "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+    "original_review_state": "DRAFT_REVIEW_RECORDED",
+    "unchanged_authorization": "NONE",
+    "original_search": {
+      "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+      "matches": [
+        {
+          "pack_id": "pack-86f3668fef1ce88237077306",
+          "job_id": "J-SYN-100",
+          "equipment_id": "P-SYN-101",
+          "observed_dates": [
+            "2026-11-03",
+            "2026-11-04"
+          ],
+          "date_is_conflicted": true,
+          "snapshot_state": "CURRENT_SOURCE_SNAPSHOT",
+          "review_state": "DRAFT_REVIEW_RECORDED"
+        }
+      ],
+      "date_semantics": "Matches any source-asserted planned date, including unresolved conflicting dates; not an approved date."
+    },
+    "stale_snapshot": "STALE_SOURCE_SNAPSHOT",
+    "stale_review": "STALE_REVIEW",
+    "stale_query": {
+      "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+      "state": "ABSTAIN_STALE_SNAPSHOT",
+      "sources": []
+    },
+    "stale_review_rejection": "SOURCE_CHANGED_REVIEW_REJECTED",
+    "new_review_state": "UNREVIEWED",
+    "unsupported_question": {
+      "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+      "state": "ABSTAIN_UNSUPPORTED_QUESTION",
+      "reason": "Only the four administrative fixture fields are supported. No safety, isolation or work authorization answer is provided.",
+      "sources": []
+    }
+  },
+  "limitations": "Small structured fictional fixtures only; no LLM, RAG, OCR, operational validation, reliability or savings proof."
+}

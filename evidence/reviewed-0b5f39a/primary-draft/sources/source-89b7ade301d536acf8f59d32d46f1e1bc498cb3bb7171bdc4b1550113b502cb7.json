@@ -1,0 +1,16 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "doc_id": "asset-register",
+  "revision": "2",
+  "job_id": "J-SYN-100",
+  "equipment_id": "P-SYN-101",
+  "passages": [
+    {
+      "id": "p1",
+      "fields": {
+        "asset_description": "Fictional pump record Alpha"
+      },
+      "text": "Administrative asset label only; no operating or safety information."
+    }
+  ]
+}

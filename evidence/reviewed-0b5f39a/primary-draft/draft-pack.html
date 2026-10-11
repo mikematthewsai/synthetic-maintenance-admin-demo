@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Synthetic administrative draft</title>
+<style>body{max-width:1100px;margin:2rem auto;padding:1rem;font:16px system-ui}strong{color:#8b0000}table{border-collapse:collapse;width:100%}td,th{border:1px solid #bbb;padding:.7rem;text-align:left;overflow-wrap:anywhere}pre,li{white-space:pre-wrap;overflow-wrap:anywhere}</style>
+<h1>Synthetic pump-job administrative pack</h1><p><strong>SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.</strong></p><p>Job J-SYN-100, equipment P-SYN-101. No operating procedures, safety decisions or work authorization.</p>
+<h2>Source-asserted fields</h2><table><tr><th>Field</th><th>State</th><th>Values and exact references</th></tr><tr><th>admin_status</th><td>conflict</td><td>deferred<br><a href="sources/source-1769ff346265c790e1634a80695e1750354c08a4d072790e3f9bc8b09218fe2c.html#p1">handover-note r1 / p1</a> (file handover-note-r1.json, SHA256 7f71f0c38bc28fe1cbcdcf16f514c9b231f76d989867ec5ed99da72e69444f2f)<hr>draft_ready<br><a href="sources/source-4676d6f402fcd23328f147a65e1cac45016809adf408e900c9568348e1abda91.html#p1">job-register r2 / p1</a> (file job-register-r2.json, SHA256 22be74d009574f525a2f78a546ef8cb128b0357f876a126731a02c964734e4f9)</td></tr><tr><th>asset_description</th><td>source_asserted</td><td>Fictional pump record Alpha<br><a href="sources/source-89b7ade301d536acf8f59d32d46f1e1bc498cb3bb7171bdc4b1550113b502cb7.html#p1">asset-register r2 / p1</a> (file asset-register-r2.json, SHA256 cedd0345dc0495f249f83f35301779d2cbc5646d95099094f6a14d6f5204dd54)</td></tr><tr><th>coordinator</th><td>missing</td><td></td></tr><tr><th>planned_date</th><td>conflict</td><td>2026-11-03<br><a href="sources/source-4676d6f402fcd23328f147a65e1cac45016809adf408e900c9568348e1abda91.html#p1">job-register r2 / p1</a> (file job-register-r2.json, SHA256 22be74d009574f525a2f78a546ef8cb128b0357f876a126731a02c964734e4f9)<hr>2026-11-04<br><a href="sources/source-1769ff346265c790e1634a80695e1750354c08a4d072790e3f9bc8b09218fe2c.html#p1">handover-note r1 / p1</a> (file handover-note-r1.json, SHA256 7f71f0c38bc28fe1cbcdcf16f514c9b231f76d989867ec5ed99da72e69444f2f)</td></tr></table>
+<h2>Human-review queue</h2><pre>[
+  {
+    &quot;reason&quot;: &quot;MISSING_REQUIRED_FIELD&quot;,
+    &quot;field&quot;: &quot;coordinator&quot;
+  },
+  {
+    &quot;reason&quot;: &quot;CONFLICTING_SOURCE_VALUES&quot;,
+    &quot;field&quot;: &quot;admin_status&quot;
+  },
+  {
+    &quot;reason&quot;: &quot;CONFLICTING_SOURCE_VALUES&quot;,
+    &quot;field&quot;: &quot;planned_date&quot;
+  },
+  {
+    &quot;reason&quot;: &quot;INGESTION_EXCEPTION&quot;,
+    &quot;source&quot;: &quot;embedded-instruction-r1.json&quot;,
+    &quot;state&quot;: &quot;UNTRUSTED_EMBEDDED_INSTRUCTION&quot;
+  },
+  {
+    &quot;reason&quot;: &quot;INGESTION_EXCEPTION&quot;,
+    &quot;source&quot;: &quot;unreadable-r1.bin&quot;,
+    &quot;state&quot;: &quot;UNREADABLE_OR_INVALID_SOURCE&quot;
+  },
+  {
+    &quot;reason&quot;: &quot;HUMAN_REVIEW_REQUIRED&quot;,
+    &quot;scope&quot;: &quot;Administrative draft only; cannot authorize maintenance.&quot;
+  }
+]</pre>
+<h2>Draft handover</h2><pre>{
+  &quot;status&quot;: &quot;draft&quot;,
+  &quot;job_id&quot;: &quot;J-SYN-100&quot;,
+  &quot;equipment_id&quot;: &quot;P-SYN-101&quot;,
+  &quot;unresolved_fields&quot;: [
+    &quot;admin_status&quot;,
+    &quot;coordinator&quot;,
+    &quot;planned_date&quot;
+  ],
+  &quot;source_references&quot;: [
+    {
+      &quot;doc_id&quot;: &quot;asset-register&quot;,
+      &quot;revision&quot;: &quot;2&quot;,
+      &quot;passage_id&quot;: &quot;p1&quot;,
+      &quot;file&quot;: &quot;asset-register-r2.json&quot;,
+      &quot;source_sha256&quot;: &quot;cedd0345dc0495f249f83f35301779d2cbc5646d95099094f6a14d6f5204dd54&quot;,
+      &quot;passage_sha256&quot;: &quot;2f2d37a60f3e6936fca7890913bf2a0f5701bbf8a9374fc33aaea5063718666c&quot;
+    },
+    {
+      &quot;doc_id&quot;: &quot;handover-note&quot;,
+      &quot;revision&quot;: &quot;1&quot;,
+      &quot;passage_id&quot;: &quot;p1&quot;,
+      &quot;file&quot;: &quot;handover-note-r1.json&quot;,
+      &quot;source_sha256&quot;: &quot;7f71f0c38bc28fe1cbcdcf16f514c9b231f76d989867ec5ed99da72e69444f2f&quot;,
+      &quot;passage_sha256&quot;: &quot;3dac1e503eecd08394bd172ce0582ed026d907ea7a51ae8cc748121282819275&quot;
+    },
+    {
+      &quot;doc_id&quot;: &quot;job-register&quot;,
+      &quot;revision&quot;: &quot;2&quot;,
+      &quot;passage_id&quot;: &quot;p1&quot;,
+      &quot;file&quot;: &quot;job-register-r2.json&quot;,
+      &quot;source_sha256&quot;: &quot;22be74d009574f525a2f78a546ef8cb128b0357f876a126731a02c964734e4f9&quot;,
+      &quot;passage_sha256&quot;: &quot;ed9ecfab1b46e5be5c0ea6e00a0bce4e9a67d1b5d44c16d87ac4362b9f28309c&quot;
+    }
+  ],
+  &quot;authorization&quot;: &quot;NONE. Administrative draft only.&quot;
+}</pre>
+<h2>Source manifest</h2><ul><li>asset-register r2 / p1: file asset-register-r2.json. Source SHA256 cedd0345dc0495f249f83f35301779d2cbc5646d95099094f6a14d6f5204dd54. Passage SHA256 2f2d37a60f3e6936fca7890913bf2a0f5701bbf8a9374fc33aaea5063718666c.</li><li>handover-note r1 / p1: file handover-note-r1.json. Source SHA256 7f71f0c38bc28fe1cbcdcf16f514c9b231f76d989867ec5ed99da72e69444f2f. Passage SHA256 3dac1e503eecd08394bd172ce0582ed026d907ea7a51ae8cc748121282819275.</li><li>job-register r2 / p1: file job-register-r2.json. Source SHA256 22be74d009574f525a2f78a546ef8cb128b0357f876a126731a02c964734e4f9. Passage SHA256 ed9ecfab1b46e5be5c0ea6e00a0bce4e9a67d1b5d44c16d87ac4362b9f28309c.</li></ul><p>Snapshot fingerprint: a89ac0219bda32b8c7a9b49bec4876715dc7557d1db31c6d91f5df8749c0ab2e. This exported view is a snapshot; retrieve through the CLI to check source freshness.</p><p><strong>SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.</strong></p></html>
