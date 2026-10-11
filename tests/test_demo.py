@@ -32,6 +32,7 @@ class AdminDemoTests(unittest.TestCase):
         pack=self.build(); key=json.loads((ROOT/'fixture-answer-key.json').read_text())
         self.assertEqual(pack['missing'],key['target']['missing'])
         self.assertEqual(pack['conflicts'],key['target']['conflicts'])
+        self.assertEqual(sorted(i['source']+':'+i['state'] for i in pack['ingestion_issues']),sorted(key['target']['ingestion_exceptions']))
         self.assertEqual({r['doc_id']+':'+r['revision']+':'+r['passage_id'] for r in pack['source_manifest']},set(key['target']['source_refs']))
         for field,item in pack['fields'].items():
             self.assertEqual([c['value'] for c in item['candidates']],key['target']['values'][field])
