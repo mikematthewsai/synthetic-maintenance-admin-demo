@@ -3,4 +3,4 @@ output/
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
-test-results.txt
+/test-results.txt

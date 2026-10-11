@@ -1,0 +1,43 @@
+SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.
+Commit: 0b5f39af903ee3fed80ab62031365c681d737fc6
+Python: 3.14.0
+
+test_case_insensitive_export_names_remain_distinct_or_reject (test_demo.AdminDemoTests.test_case_insensitive_export_names_remain_distinct_or_reject) ... ok
+test_checklist_change_invalidates_review (test_demo.AdminDemoTests.test_checklist_change_invalidates_review) ... ok
+test_conflicts_visible_without_winner (test_demo.AdminDemoTests.test_conflicts_visible_without_winner) ... ok
+test_current_revision_ambiguity_excludes_document (test_demo.AdminDemoTests.test_current_revision_ambiguity_excludes_document) ... ok
+test_delimiter_collision_fixture_exports_distinct_exact_sources (test_demo.AdminDemoTests.test_delimiter_collision_fixture_exports_distinct_exact_sources) ... ok
+test_deterministic_repeated_build (test_demo.AdminDemoTests.test_deterministic_repeated_build) ... ok
+test_exact_asset_separation (test_demo.AdminDemoTests.test_exact_asset_separation) ... ok
+test_export_mapping_collision_is_rejected_before_writes (test_demo.AdminDemoTests.test_export_mapping_collision_is_rejected_before_writes) ... ok
+test_export_rejects_changed_source (test_demo.AdminDemoTests.test_export_rejects_changed_source) ... ok
+test_export_uses_unique_identity_names_for_nested_sources (test_demo.AdminDemoTests.test_export_uses_unique_identity_names_for_nested_sources) ... ok
+test_fixture_answer_key_and_source_refs (test_demo.AdminDemoTests.test_fixture_answer_key_and_source_refs) ... ok
+test_human_queue_and_draft_handover (test_demo.AdminDemoTests.test_human_queue_and_draft_handover) ... ok
+test_irrelevant_material_excluded (test_demo.AdminDemoTests.test_irrelevant_material_excluded) ... ok
+test_malformed_manifest_fails_explicitly (test_demo.AdminDemoTests.test_malformed_manifest_fails_explicitly) ... ok
+test_malicious_instruction_quarantined (test_demo.AdminDemoTests.test_malicious_instruction_quarantined) ... ok
+test_manifest_duplicate_is_explicit_failure (test_demo.AdminDemoTests.test_manifest_duplicate_is_explicit_failure) ... ok
+test_missing_abstention (test_demo.AdminDemoTests.test_missing_abstention) ... ok
+test_missing_or_invalid_current_competitor_also_blocks (test_demo.AdminDemoTests.test_missing_or_invalid_current_competitor_also_blocks) ... ok
+test_missing_source_recorded (test_demo.AdminDemoTests.test_missing_source_recorded) ... ok
+test_no_external_side_effect_surface_and_all_labels (test_demo.AdminDemoTests.test_no_external_side_effect_surface_and_all_labels) ... ok
+test_path_escape_rejected (test_demo.AdminDemoTests.test_path_escape_rejected) ... ok
+test_persistence_across_cli_processes (test_demo.AdminDemoTests.test_persistence_across_cli_processes) ... ok
+test_render_source_links_hashes_and_html_escaping (test_demo.AdminDemoTests.test_render_source_links_hashes_and_html_escaping) ... ok
+test_retrieval_by_job_equipment_and_conflicting_date (test_demo.AdminDemoTests.test_retrieval_by_job_equipment_and_conflicting_date) ... ok
+test_review_is_revision_bound_and_never_authorizes (test_demo.AdminDemoTests.test_review_is_revision_bound_and_never_authorizes) ... ok
+test_runtime_does_not_attempt_network_connection (test_demo.AdminDemoTests.test_runtime_does_not_attempt_network_connection) ... ok
+test_source_change_invalidates_review_and_query (test_demo.AdminDemoTests.test_source_change_invalidates_review_and_query) ... ok
+test_source_identity_and_bad_field_rejected (test_demo.AdminDemoTests.test_source_identity_and_bad_field_rejected) ... ok
+test_superseded_values_excluded (test_demo.AdminDemoTests.test_superseded_values_excluded) ... ok
+test_unknown_pack_and_invalid_search_date (test_demo.AdminDemoTests.test_unknown_pack_and_invalid_search_date) ... ok
+test_unreadable_current_competitor_blocks_readable_revision (test_demo.AdminDemoTests.test_unreadable_current_competitor_blocks_readable_revision) ... ok
+test_unreadable_input_explicit (test_demo.AdminDemoTests.test_unreadable_input_explicit) ... ok
+test_unsupported_questions_abstain (test_demo.AdminDemoTests.test_unsupported_questions_abstain) ... ok
+test_wrong_snapshot_review_rejected (test_demo.AdminDemoTests.test_wrong_snapshot_review_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 1.145s
+
+OK
