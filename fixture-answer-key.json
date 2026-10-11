@@ -19,5 +19,11 @@
   "separate_asset": {"job_id": "J-SYN-101", "equipment_id": "P-SYN-101A", "coordinator": "Fictional Reviewer B", "missing": [], "conflicts": []},
   "unsupported_questions": ["safe_to_operate", "isolation_points", "authorize_work", "expected_savings"],
   "after_source_change": "Old stored snapshot and review stale; old fact query abstains; new pack unreviewed",
-  "irrelevant": "J-SYN-900 OFFICE-SYN-9 must not contribute to either pump job"
+  "irrelevant": "J-SYN-900 OFFICE-SYN-9 must not contribute to either pump job",
+  "review_regressions": {
+    "delimiter_collision_pairs": [["a-r1", "2"], ["a", "1-r2"]],
+    "case_pairs": [["a", "1-r2"], ["A", "1-r2"]],
+    "export_expectation": "Distinct hashed source names, exact passage links and original bytes; duplicate or casefold-colliding export names rejected before writing",
+    "failed_current_competitor": "job-register revision 3 current=true blocks revision 2 when unreadable, missing, invalid or quarantined; MULTIPLE_CURRENT_REVISIONS remains in human-review queue"
+  }
 }

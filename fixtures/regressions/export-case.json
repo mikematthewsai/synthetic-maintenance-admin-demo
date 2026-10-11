@@ -1,0 +1,16 @@
+{
+  "label": "SYNTHETIC DEMONSTRATION. DRAFT. NOT AUTHORIZED FOR MAINTENANCE.",
+  "doc_id": "A",
+  "revision": "1-r2",
+  "job_id": "J-SYN-100",
+  "equipment_id": "P-SYN-101",
+  "passages": [
+    {
+      "id": "p1",
+      "fields": {
+        "asset_description": "Fictional case-sensitive source identity"
+      },
+      "text": "Synthetic administrative regression record only."
+    }
+  ]
+}

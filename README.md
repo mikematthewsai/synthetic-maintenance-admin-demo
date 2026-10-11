@@ -26,7 +26,7 @@ python demo.py ingest
 python demo.py build --job J-SYN-100 --equipment P-SYN-101 --export output/view
 ```
 
-Open `output/view/draft-pack.html` as a local file. Each value links to an escaped source view at its exact passage, revision and original-file hash; the source JSON snapshot is alongside the view. The HTML is a frozen export and does not dynamically check freshness. Use `get` or `query` for current source freshness.
+Open `output/view/draft-pack.html` as a local file. Each value links to an escaped source view at its exact passage, revision and original-file hash; the source JSON snapshot is alongside the view. Export names hash the structured document/revision pair and reject duplicate names before writing, including case-insensitive collisions. The HTML is a frozen export and does not dynamically check freshness. Use `get` or `query` for current source freshness.
 
 PowerShell example for a recorded **draft** review and retrieval:
 
@@ -44,3 +44,5 @@ The first query preserves both conflicting dates. The second abstains. A review 
 Data stays in local fixture files, local SQLite and local exports. This is a single-user CLI; it has no remote server, authentication or connection to operating equipment. Local access is ordinary filesystem access. `output/` is ignored by Git. The repository has no remote and has not been deployed or published.
 
 Passing this small, deliberately designed corpus does not establish representative coverage, safety, savings, production reliability or general document understanding. Every source-asserted administrative value remains a claim from a fixture, not an operational fact.
+
+Independent static review identified two real defects in the original 29-test version: delimiter-concatenated export names could collide, and failed-ingestion current revisions were absent from ambiguity counting. Both are corrected with explicit regression fixtures/tests, including the exact ('a-r1','2') versus ('a','1-r2') case, casefold collisions, and unreadable/missing/invalid/quarantined current competitors. The current suite has 34 tests. Original results are historical, not proof those defects never existed.

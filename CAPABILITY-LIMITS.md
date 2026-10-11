@@ -8,7 +8,11 @@ The implemented path is manifest and checklist -> strict UTF-8 JSON input valida
 
 A corpus fingerprint includes the manifest bytes, checklist bytes and hashes of all manifest-listed files, including unreadable/superseded files and missing-file markers. This intentionally conservative policy invalidates a review even after an unrelated corpus change. Review records attach to an exact pack/fingerprint. Freshness is recomputed when loading/querying; a stale snapshot remains available for history but its fact query abstains. New builds are unreviewed. Exported HTML is frozen, visibly labeled as a snapshot and requires CLI freshness checking.
 
+Current-revision ambiguity is counted from manifest assertions before ingestion. An unreadable, missing, malformed or quarantined competing current revision blocks use of that document's readable revision and remains an exception in the human queue. Source exports use the hash of a structured identity pair, not delimiter concatenation. A pre-write duplicate check also compares filename casefolds. Regression coverage includes known delimiter/case collisions; this is not a universal cryptographic or filesystem assurance claim.
+
 SQLite stores administrative draft JSON and reviewer notes using parameterized SQL. There is no LLM, embedding, vector store, RAG, OCR or AI service. No model accuracy was tested. Known embedded-instruction patterns are quarantined in these fixtures; more fundamentally, source text never becomes executable instructions. Arbitrary hostile language detection is not claimed. Untrusted HTML-like field text is escaped in exports. Corpus paths resolving outside the fixture root are rejected.
+
+The quarantine consists of three explicit regular-expression patterns, not a general AI security defense. Query accepts only the four exact field keys. The network checks allowlist all top-level imports (including from-imports and multi-import names) and trap three socket connection entry points during selected demonstrated flows. No connection attempts were observed there; these tests do not establish OS-level network isolation or exhaustive runtime behavior.
 
 ## Limits of demonstrated ability
 

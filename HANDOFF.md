@@ -11,7 +11,11 @@
 - Source changes invalidate old review; stale fact query abstains.
 - Local escaped HTML links to source passage views and original JSON snapshots.
 - Exact job/equipment/date SQLite retrieval tested across CLI processes.
-- Initial suite 26 passed; final suite adds network/malformed/nested-export checks.
+- Original 29-test version had two defects found in independent static review.
+- Fixed structured-identity export hashing with casefold duplicate guard.
+- Fixed current ambiguity counting before ingestion, including failed sources.
+- Added exact delimiter/case collision and failed-current regression fixtures.
+- Complete suite now 34 tests; tightened import/selected socket-call checks.
 - run_evidence.py records actual final results and exact clean Git HEAD locally.
 - README.md and TEST-PLAN.md contain reproduction commands.
 - fixture-answer-key.json contains hand-written synthetic fixture expectations.

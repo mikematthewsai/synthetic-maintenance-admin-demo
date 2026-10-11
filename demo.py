@@ -56,7 +56,7 @@ def corpus(root):
             raise DemoError('INVALID_MANIFEST')
     except (OSError, ValueError, KeyError, TypeError) as error:
         raise DemoError('MANIFEST_OR_CHECKLIST_UNREADABLE') from error
-    sources, issues, hashes, keys = [], [], {}, set()
+    sources, issues, hashes, keys, currents = [], [], {}, set(), {}
     for entry in entries:
         if not isinstance(entry, dict): raise DemoError('INVALID_MANIFEST_ENTRY')
         try:
@@ -67,6 +67,8 @@ def corpus(root):
             keys.add(key)
             if type(entry['current']) is not bool:
                 raise DemoError('INVALID_CURRENT_FLAG')
+            # Currency is a manifest assertion, even when its bytes cannot be ingested.
+            if entry['current']: currents.setdefault(doc_id, []).append(revision)
             raw = read_within(root, entry['file'])
             hashes[entry['file']] = digest(raw)
         except DemoError:
@@ -109,9 +111,6 @@ def corpus(root):
             issues.append({'source': entry['file'], 'state': 'INVALID_SOURCE_SCHEMA'})
         except DemoError as error:
             issues.append({'source': entry['file'], 'state': str(error)})
-    currents = {}
-    for source in sources:
-        if source['current']: currents.setdefault(source['doc_id'], []).append(source)
     ambiguous = {k for k, rows in currents.items() if len(rows) != 1}
     for doc_id in sorted(ambiguous):
         issues.append({'source': doc_id, 'state': 'MULTIPLE_CURRENT_REVISIONS'})
@@ -217,20 +216,32 @@ def answer(pack, field):
     return envelope(field=field, state=item['state'], candidates=item['candidates'],
                     interpretation='Source assertions only. Conflicts are not resolved; missing facts are not invented.')
 
+def source_basename(ref):
+    """Structured identity encoding avoids delimiter ambiguity; full hash bounds length."""
+    return 'source-'+digest(encoded([ref['doc_id'],ref['revision']]))
+
 def render(pack, target, root):
     """Write escaped static HTML and JSON locally; source links use filename plus passage ID."""
+    # Check all output identities before writing any files, including hash collision defense.
+    names={}
+    for ref in pack['source_manifest']:
+        name=source_basename(ref)
+        name_key=name.casefold()
+        identity=(ref['doc_id'],ref['revision'],ref['file'],ref['source_sha256'])
+        if name_key in names and names[name_key]!=identity: raise DemoError('DUPLICATE_EXPORT_NAME')
+        names[name_key]=identity
     target=Path(target); target.mkdir(parents=True,exist_ok=True)
     source_dir=target/'sources'; source_dir.mkdir(exist_ok=True)
     for ref in pack['source_manifest']:
         raw=read_within(Path(root),ref['file'])
         if digest(raw)!=ref['source_sha256']: raise DemoError('SOURCE_CHANGED_EXPORT_REJECTED')
         doc=json.loads(raw.decode('utf-8'))
-        name=ref['doc_id']+'-r'+ref['revision']+'.html'
+        name=source_basename(ref)+'.html'
         contents=[]
         for passage in doc['passages']:
             contents.append(f'<section id="{html.escape(passage["id"])}"><h2>Passage {html.escape(passage["id"])}</h2><p>{html.escape(passage["text"])}</p><pre>{html.escape(json.dumps(passage["fields"],indent=2))}</pre></section>')
         (source_dir/name).write_text(f'<!doctype html><html lang="en"><meta charset="utf-8"><title>Synthetic source</title><h1>{html.escape(doc["doc_id"])} revision {html.escape(doc["revision"])}</h1><p><strong>{LABEL}</strong></p><p>SHA256 {digest(raw)}</p>'+''.join(contents)+'</html>',encoding='utf-8')
-        (source_dir/(ref['doc_id']+'-r'+ref['revision']+'.json')).write_bytes(raw)
+        (source_dir/(source_basename(ref)+'.json')).write_bytes(raw)
     (target/'draft-pack.json').write_text(json.dumps(pack,indent=2)+'\n',encoding='utf-8')
     esc=html.escape
     rows=[]
@@ -239,7 +250,7 @@ def render(pack, target, root):
         for candidate in item['candidates']:
             citations=[]
             for ref in candidate['sources']:
-                link='sources/'+ref['doc_id']+'-r'+ref['revision']+'.html#'+ref['passage_id']
+                link='sources/'+source_basename(ref)+'.html#'+ref['passage_id']
                 citations.append(f'<a href="{esc(link)}">{esc(ref["doc_id"])} r{esc(ref["revision"])} / {esc(ref["passage_id"])}</a> (file {esc(ref["file"])}, SHA256 {ref["source_sha256"]})')
             candidates.append(esc(candidate['value'])+'<br>'+ '<br>'.join(citations))
         rows.append(f'<tr><th>{esc(field)}</th><td>{esc(item["state"])}</td><td>'+ '<hr>'.join(candidates)+'</td></tr>')

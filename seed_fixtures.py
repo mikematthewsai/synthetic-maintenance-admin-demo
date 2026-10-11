@@ -31,17 +31,26 @@ def seed(root=ROOT):
         doc = {'label': LABEL, 'doc_id': doc_id, 'revision': revision,
                'job_id': job, 'equipment_id': equipment,
                'passages': [{'id': pid, 'fields': fields, 'text': text} for pid, fields, text in passages]}
-        (root / filename).write_text(json.dumps(doc, indent=2) + '\n', encoding='utf-8')
+        (root / filename).write_text(json.dumps(doc, indent=2) + '\n', encoding='utf-8', newline='\n')
         entries.append({'doc_id': doc_id, 'revision': revision, 'current': current, 'file': filename})
     (root / 'unreadable-r1.bin').write_bytes(b'\xff\xfe\x00\x80')
     entries.append({'doc_id': 'unreadable', 'revision': '1', 'current': True, 'file': 'unreadable-r1.bin'})
     manifest = {'label': LABEL, 'site': 'Fictional Example Site', 'documents': entries}
-    (root / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
+    (root / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
     checklist = {'label': LABEL, 'id': 'fictional-admin-checklist', 'revision': '1',
         'defined_by': 'Fictional administrative fixture reviewer',
         'required_fields': ['asset_description', 'planned_date', 'coordinator', 'admin_status'],
         'scope': 'Administrative record completeness only. A real qualified reviewer must define requirements before using real maintenance semantics.'}
-    (root / 'checklist.json').write_text(json.dumps(checklist, indent=2) + '\n', encoding='utf-8')
+    (root / 'checklist.json').write_text(json.dumps(checklist, indent=2) + '\n', encoding='utf-8', newline='\n')
+    regressions=root/'regressions'; regressions.mkdir(exist_ok=True)
+    for filename,doc_id,revision,field,value in [
+        ('export-left.json','a-r1','2','asset_description','Fictional export collision left'),
+        ('export-right.json','a','1-r2','coordinator','Fictional regression reviewer'),
+        ('export-case.json','A','1-r2','asset_description','Fictional case-sensitive source identity')]:
+        document={'label':LABEL,'doc_id':doc_id,'revision':revision,'job_id':'J-SYN-100','equipment_id':'P-SYN-101',
+            'passages':[{'id':'p1','fields':{field:value},'text':'Synthetic administrative regression record only.'}]}
+        (regressions/filename).write_text(json.dumps(document,indent=2)+'\n',encoding='utf-8',newline='\n')
+    (regressions/'competing-current-r3.bin').write_bytes(b'\xff\xfe\x00\x80')
 
 if __name__ == '__main__':
     seed()
